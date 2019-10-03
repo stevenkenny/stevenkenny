@@ -1,0 +1,507 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#INTRODUCTION"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Introduction\n",
+    "My name is Steven Kenny. I completed my undergraduate degree studying Earth Sciences at Trinity College Dublin. \n",
+    "I chose to study GIS as I would like to become a geomatic surveyor\n",
+    "\n",
+    "3 Features of Python that make it the most popular programming language\n",
+    "(1) Easy to Learn and Use Python is easy to learn and use. It is developer-friendly and high level programming language.\n",
+    "(2) Free and Open Source\n",
+    "(3)  Expressive Language-Python language is more expressive means that it is more understandable and readable.\n",
+    "\n",
+    "What problems has Python faced as a language and ecosystem?\n",
+    "Phyton has faced the following problems: Speed Limitations-We know that Python code is executed line by line.\n",
+    "Python is interpreted, it results in slow execution\n",
+    "Weak in Mobile Computing and Browsers\n",
+    "Underdeveloped Database Access Layers-Compared to more widely used technologies like JDBC (Java DataBase Connectivity) and \n",
+    "ODBC (Open DataBase Connectivity), Python’s database access layers are a bit underdeveloped.\n",
+    "Consequently, it is less often applied in huge enterprises.\n",
+    "\n",
+    "Three apps built with Python-\n",
+    "(1) Instagram\n",
+    "(2) Reddit\n",
+    "(3) Uber\n",
+    "\n",
+    "What relationship does it have with GIS (not mentioned already)?\n",
+    "Python is a scripting language incorporated into many GIS software applications \n",
+    "such as ArcGIS and QGIS and is used to automate geoprocessing tasks.\n",
+    "\n",
+    "Identify 2 examples of types of data that is useful for a GIS task\n",
+    "(1) Vector data\n",
+    "(2) Rastor data\n",
+    "\n",
+    "Identify a project that used computer programming to help solve a GIS task (that we wont cover today)-\n",
+    "Census 2016-Automation of large amounts of data. This makes handling data easier leading to more accurate results. \n",
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "***"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Exercise 1\n",
+    "\n",
+    "Before starting, make a copy of this file and save it as \n",
+    "> TUD_PROG9000w01_First-initial_Surname\n",
+    "\n",
+    "If we wanted to perform some more complicated procedure, we can build the process from these blocks. For example, to get the distance between two points A and B with co-ordinates (1,2) and (3,4) respectively, we can use the formula for the Euclidean distance:\n",
+    "$$ d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} $$\n",
+    "\n",
+    "\n",
+    "Give this a try now. The answer you need to get is 2.8284271247461903\n",
+    "\n",
+    "Steps in doing this:\n",
+    " - assign values to variables `x1 = 1` etc.\n",
+    " \n",
+    " - write the formula starting with the inside and working out\n",
+    " \n",
+    " - run the piece of code (click run button or ctrl-enter)\n",
+    " \n",
+    " I've helped you out by filling out some of the code."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2.8284271247461903\n"
+     ]
+    }
+   ],
+   "source": [
+    "# assign values to variables\n",
+    "x1 = 1\n",
+    "x2 = 3\n",
+    "y1 = 2\n",
+    "y2 = 4\n",
+    "\n",
+    "# write formula\n",
+    "d = ((x2 - x1)**2 + (y2 - y1)**2)**0.5\n",
+    "\n",
+    "# output the answer \n",
+    "# note we convert the numeric d to a string before \n",
+    "# output with the str() function\n",
+    "\n",
+    "print(str(d))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "***"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Exercise 2\n",
+    "Let's write a simple program to output the number of days in each month. I've put most of the code in, you fill in the rest."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "month = input(\"Please enter the numeric value of the month - eg 4 for April\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "month = int(input(\"Please enter the numeric value of the month - eg 4 for April\"))\n",
+    "\n",
+    "if (month == 2):\n",
+    "    print(\"28 or sometimes 29\")\n",
+    "elif month == 9:\n",
+    "    print(\"30\")\n",
+    "elif month == 4:\n",
+    "    print(\"30\")\n",
+    "elif month == 6:\n",
+    "    print(\"30\")\n",
+    "elif month == 11:\n",
+    "    print(\"30\")\n",
+    "else:\n",
+    "    print(\"31\")\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "A sphere has a radius of 22mm\n",
+      "The formula for the volume of a sphere is 4/3.Π.𝑟^3\n",
+      "The volume of the sphere is 44602.23810056549mm\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Volume of a sphere\n",
+    "#sphere radius =22mm\n",
+    "print(\"A sphere has a radius of 22mm\")\n",
+    "print(\"The formula for the volume of a sphere is 4/3.Π.𝑟^3\")\n",
+    "x= 22\n",
+    "π=3.14159265358979323846264338327950\n",
+    "v= ((4/3)*(π)*(x**3))\n",
+    "\n",
+    "print(\"The volume of the sphere is\" , str(v)+\"mm\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Input radius\n",
+    "radius = input(\"Enter Radius: \")\n",
+    "print(\"Radius: \" + str(radius))\n",
+    "\n",
+    "r = float(radius)\n",
+    "volume = 4.0/3.0 * 3.14 * (r**3)\n",
+    "print(\"Volume: \" + str((volume)))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter radius of a cylinder 6\n",
+      "Enter the Height of a cylinder 8\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Volume of a cylinder will be 904.32\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Volume of cylinder\n",
+    "r=float(input(\"Enter radius of a cylinder:\"))\n",
+    "\n",
+    "h=float(input(\"Enter the Height of a cylinder:\"))\n",
+    "\n",
+    "#calculate the volume of cylinder\n",
+    "volume=3.14*r**2*h\n",
+    "\n",
+    "print(\"Volume of a cylinder will be \" + str((volume)))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter radius of a cone: 3\n",
+      "Enter the Height of a cone: 6\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Volume of a cone will be 56.52\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Volume of Cone\n",
+    "r=float(input(\"Enter radius of a cone:\"))\n",
+    "\n",
+    "h=float(input(\"Enter the Height of a cone:\"))\n",
+    "\n",
+    "#Volume of cone\n",
+    "volume=3.14*r**2*h/3\n",
+    "\n",
+    "print(\"Volume of a cone will be \" + str((volume)))\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Amount of fuel used: 6\n",
+      "Distance travelled: 6\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The fuel efficiency of the car will be 1.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Fuel efficiency\n",
+    "\n",
+    "x= float(input(\"Amount of fuel used:\"))\n",
+    "y=float(input(\"Distance travelled:\"))\n",
+    "#Calculation\n",
+    "Fuelefficiency = (y/x)\n",
+    "print( \"The fuel efficiency of the car will be\", str((Fuelefficiency)))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [],
+   "source": [
+    "#Temperature conversion\n",
+    "y= float(input(\"Temperature in Fahrenheit:\"))\n",
+    "\n",
+    "#Conversion formula:\n",
+    "Conversion= (y-32) * 5/9 \n",
+    "\n",
+    "print (\"The temperature in Celsius is\", str((Conversion)))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Temperature conversion\n",
+    "y= float(input(\"Temperature in Celsius\"))\n",
+    "\n",
+    "#Conversion formula:\n",
+    "Conversion= (y* 9/5) + 32  \n",
+    "\n",
+    "print (\"The temperature in Fahrenheit is\", str((Conversion)))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Temperature in Celsius 22\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The temperature in Fahrenheit is 71.6\n"
+     ]
+    },
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Temperaturein Fahrenheit 71.6\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The temperature in Celsius is 21.999999999999996\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Temperature conversion\n",
+    "y= float(input(\"Temperature in Celsius\"))\n",
+    "\n",
+    "#Conversion formula:\n",
+    "Conversion= (y* 9/5) + 32  \n",
+    "\n",
+    "print (\"The temperature in Fahrenheit is\", str((Conversion)))\n",
+    "\n",
+    "y= float(input(\"Temperaturein Fahrenheit\"))\n",
+    "\n",
+    "#Conversion formula:\n",
+    "Conversion= (y-32) * 5/9 \n",
+    "\n",
+    "print (\"The temperature in Celsius is\", str((Conversion)))\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Temperature conversion\n",
+    "x= str(input(\"Input Celsius to Fahrenheit or Fahrenheit to Celsius:\"))\n",
+    "\n",
+    "\n",
+    "if x == (\"Celsius to Fahrenheit\"):\n",
+    "    y = float(input(\"Temperature in Celsius\"))\n",
+    "\n",
+    "    #Conversion formula:\n",
+    "    Conversion= (y* 9/5) + 32  \n",
+    "\n",
+    "    print (\"The temperature in Fahrenheit is:\", str((Conversion)))\n",
+    "            \n",
+    "if x == (\"Fahrenheit to Celsius\"):\n",
+    "    y= float(input(\"Temperature in Fahrenheit\"))\n",
+    "\n",
+    "    #Conversion formula:\n",
+    "    Conversion= (y-32) * 5/9 \n",
+    "\n",
+    "    print (\"The temperature in Celsius is:\", str((Conversion)))\n",
+    "                "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "***"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Further Exercises"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Let's write a few simple programs.\n",
+    "\n",
+    " - Geometry\n",
+    "     - calculate the volume of a sphere with radius 20mm.  \n",
+    "        - Formula for sphere volume is $$ 4/3.\\Pi.r^3$$  \n",
+    "        - Output the result with a nice message.\n",
+    "     - allow the user to enter a radius for the above program and output the result.\n",
+    "     - calculate the volume of a cylinder, allowing the user to input the height and radius, and then print the output with a nice message.\n",
+    "     - calculate the volume of a cone, allowing the user to input the height and radius, and then print the output with a nice message.\n",
+    " \n",
+    " (Do nice outputs for all the below also...)\n",
+    " - calculate the fuel efficiency achieved on a journey, allowing the user to input the distance travelled and the amount of fuel used.\n",
+    " \n",
+    " - Currency Exchange\n",
+    "     - create a Fahrenheit to Celsius converter, with user input\n",
+    "     - create a Celsius to Fahrenheit converter, with user input\n",
+    "     - combine the calculators into one, and allow the user to choose which conversion to do (hint: you'll need to use an if statement).\n",
+    " "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "***"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## For Next Week....\n",
+    "\n",
+    " - Read Intro and Chapter 1, Python Basics of “Automate the Boring Stuff” (see resources)\n",
+    " - Install Python 3.6, Anaconda on your own machine (if you want.. I can help if there are issues)\n",
+    " - Self-directed learning:\n",
+    "     - Clear out the unnecessary text and leave only the exercises and your solutions from your own Jupyter file\n",
+    "     - Type up an introduction to who you are and why you have chosen to pursue GIS studies/as a career path\n",
+    "     - Write three key features of Python that make it one of the most popular languages for programming. What problems has Python faced as a language and ecosystem? What major software/applications are built on Python (name 3 not mentioned already)? What relationship does it have with GIS (not mentioned already)?\n",
+    "     - Identify 2 examples of types of data that is useful for a GIS task\n",
+    "     - Identify a project that used computer programming to help solve a GIS task (that we wont cover today)\n",
+    "     - Save this file as ‘week1.txt’ and upload to your github account (or type / copy and paste into a new file on github directly) in your DT9420 repo.\n",
+    "     - Format and sort your Jupyter Notebook into a logical order starting with your introduction"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
